@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-sm navbar-collapse bg-success menu">
+    <div class="container">
+		<h1>Cores</h1>
+        <div class="collapse navbar-collapse" id="nav-principal">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="/timeline" class="nav-link text-white"><h4>Admin</h4></a>
+              </li>
+            </ul>
+        </div>
+    </div> 
+</nav>
+<section id="azul">
+          <div class="container ml-auto meio e">
+            <div class="row">
+              <div class="col-md-12">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators home">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <h1 class="display-4">Cores</h1>
+                    </div>
+                    <div class="carousel-item">
+                      <h1 class="display-4">Detalhes</h1>
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+             </div>
+          </div>
+</section>
+<section id="home">
+<div class="container espaco">
+	<div class="row">
+		<div class="col-md-12">
+			
+			<div class="row mb-2">
+				<div class="col">
+					<div class="card">
+						<div class="card-body">
+							<form method="get" action="/quem_seguir">
+								<div class="input-group mb-3">
+									<input type="text" name="pesquisarPor" class="form-control" placeholder="Quem você está procurando?">
+									<div class="input-group-append">
+										<button class="btn btn-primary" type="submit">Procurar</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<?php foreach($this->view->mensagens as $indice_arr => $mensagens) { ?>
+				<div class="row mb-2">
+					<div class="col">
+						<div class="card">
+							<div class="card-body">
+								<div class="row">
+									<div class="col-md-6">
+										<?= $mensagens['Cor'] ?>
+                    <br>
+                    <?= $mensagens['Detalhes'] ?>
+									</div>
+								
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<?php } ?>
+		</div>
+	</div>
+</div>
+</section >

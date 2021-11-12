@@ -1,0 +1,13 @@
+create table usuarios(
+	id int not null primary key AUTO_INCREMENT,
+	nome varchar(100) not null,
+	email varchar(150) not null,
+	senha varchar(32) not null
+);
+create table mensagens(
+	id int not null PRIMARY KEY AUTO_INCREMENT,
+	Cor varchar(140) not null,
+	Detalhes varchar(140) not null
+	
+);
+

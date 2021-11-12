@@ -1,0 +1,43 @@
+html, body {
+  height: 100%;
+}
+
+body {
+	font-family: "Segoe UI", Arial, sans-serif;
+}
+.meio{
+	text-align: center;
+}
+.espaco{
+    padding: 100px;
+}
+.v{
+    background: rgb(120, 221, 137);
+}
+#azul{
+    background: rgb(184, 223, 228);
+}
+
+#home{
+    background-color: rgb(193, 233, 196);
+    padding: 20px;
+}
+h1 {
+	display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h2 {
+	display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
