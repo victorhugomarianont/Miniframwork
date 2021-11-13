@@ -41,3 +41,8 @@ h2 {
     margin-inline-end: 0px;
     font-weight: bold;
 }
+#amostra_cor{
+    width: 2.5rem;
+    border-color:darkslategray;
+    border-width: 1.2px;
+}
