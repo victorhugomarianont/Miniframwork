@@ -29,13 +29,19 @@ class mensagens extends Model {
 	
 		public function getAll() {
 			
-			$query = "select id, Cor, Detalhes from mensagens where Cor like :Cor
-			group by cor";
-					
+			$query = "select id, Cor, Detalhes from mensagens where LOWER(Cor) like LOWER(:Cor)";		
 			$stmt = $this->db->prepare($query);
-			$stmt->bindValue(':Cor',$this->__get('Cor').'%');
+			$stmt->bindValue(':Cor','%'.$this->__get('Cor').'%');
 			$stmt->execute();
-	
+			return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+		}
+
+		public function getAllcores() {
+			
+			$query = "select id, Cor, Detalhes from mensagens where LOWER(Cor) like LOWER(:Cor)";		
+			$stmt = $this->db->prepare($query);
+			$stmt->bindValue(':Cor','%'.$this->__get('Cor').'%');
+			$stmt->execute();
 			return $stmt->fetchAll(\PDO::FETCH_ASSOC);
 		}
 	

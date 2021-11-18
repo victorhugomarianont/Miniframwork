@@ -4,7 +4,7 @@
         <div class="collapse navbar-collapse" id="nav-principal">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a href="/indexx" class="nav-link text-white"><h4>admin</h4></a>
+                <a href="/timeline" class="nav-link text-white"><h4>Admin</h4></a>
               </li>
             </ul>
         </div>
@@ -62,6 +62,31 @@
 					</div>
 				</div>
 			</div>
+
+			<?php foreach($this->view->mensagens as $indice_arr => $mensagens) { ?>
+				<div class="row mb-2">
+					<div class="col">
+						<div class="card">
+							<div class="card-body">
+								<div class="row">
+									<div class="col-md-6">
+										<?= $mensagens['Cor'] ?>
+                    <br>
+                    <?= $mensagens['Detalhes'] ?>
+                    <br>
+                    <input type="color" value="<?= $mensagens['Detalhes'] ?>"  id="amostra_cor" disabled>
+                    <br>
+                    <font color="<?=$mensagens['Detalhes']?>">Pesquise Mais, Nos agradeçemos.</font>
+                   
+									</div>
+								
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<?php } ?>
 		</div>
 	</div>
 </div>

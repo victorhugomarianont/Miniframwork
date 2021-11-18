@@ -36,7 +36,7 @@ class AppController extends Action {
 
 	}
 
-	public function quemSeguir() {
+	public function procuraCor() {
 
 
 		$pesquisarPor = isset($_GET['pesquisarPor']) ? $_GET['pesquisarPor'] : '';
@@ -46,15 +46,35 @@ class AppController extends Action {
 		if($pesquisarPor != '') {
 			
 			$mensagens = Container::getModel('mensagens');
-			$mensagens->__set('cor', $pesquisarPor);
+			$mensagens->__set('Cor', $pesquisarPor);
 			$mensagens = $mensagens->getAll();
 
 		}
 
 		$this->view->mensagens = $mensagens;
 
-		$this->render('quemSeguir');
+		$this->render('procuraCor');
 	}	
+
+	public function procuracorAdmin() {
+
+
+		$pesquisarPor = isset($_GET['pesquisarPorcores']) ? $_GET['pesquisarPorcores'] : '';
+		
+		$mensagens = array();
+
+		if($pesquisarPor != '') {
+			
+			$mensagens = Container::getModel('mensagens');
+			$mensagens->__set('Cor', $pesquisarPor);
+			$mensagens = $mensagens->getAll();
+
+		}
+
+		$this->view->mensagens = $mensagens;
+
+		$this->render('procuracorAdmin');
+	}
 
 	
 }

@@ -3,8 +3,14 @@
 		<h1>Cores</h1>
         <div class="collapse navbar-collapse" id="nav-principal">
             <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a href="/timeline" class="nav-link text-white"><h4>Home</h4></a>
+              </li>
+			  <li class="nav-item">
+			  	<a href="/procura_corAdmin" class="nav-link text-white"><h4>Buscar</h4></a>
+              </li>
               <li class="nav-item">
-                <a href="/indexx" class="nav-link text-white"><h4>admin</h4></a>
+                <a href="/sair" class="nav-link text-white"><h4>Sair</h4></a>
               </li>
             </ul>
         </div>
@@ -50,9 +56,9 @@
 				<div class="col">
 					<div class="card">
 						<div class="card-body">
-							<form method="get" action="/procura_Cor">
+							<form method="get" action="/procura_corAdmin">
 								<div class="input-group mb-3">
-									<input type="text" name="pesquisarPor" class="form-control" placeholder="Digite a cor que procura">
+									<input type="text" name="pesquisarPorcores" class="form-control" placeholder="Digite a cor que procura">
 									<div class="input-group-append">
 										<button class="btn btn-primary" type="submit">Procurar</button>
 									</div>
@@ -62,6 +68,38 @@
 					</div>
 				</div>
 			</div>
+
+			<?php foreach($this->view->mensagens as $indice_arr => $mensagens) { ?>
+				<div class="row mb-2">
+					<div class="col">
+						<div class="card">
+							<div class="card-body">
+								<div class="row">
+									<div class="col-md-6">
+										<?= $mensagens['Cor'] ?>
+                    <br>
+                    <?= $mensagens['Detalhes'] ?>
+                    <br>
+                    <input type="color" value="<?= $mensagens['Detalhes'] ?>"  id="amostra_cor" disabled>
+                    <br>
+                    <span color="<?=$mensagens['Detalhes']?>">Pesquise Mais, Nos agradeçemos.</span>
+
+                    
+                    <form method="get" action="Victor precisa criar metedo por aqui ele tem q ir para route depois funcao pode ser mensagens ou usuario"> 
+                      <div class="col d-flex justify-content-end">
+                        <button type="submit" class="btn btn-danger"><small>Remover</small></button>
+                      </div>
+                    </form>
+									</div>
+								
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<?php } ?>
+   
 		</div>
 	</div>
 </div>

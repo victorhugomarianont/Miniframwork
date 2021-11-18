@@ -61,11 +61,19 @@ class Route extends Bootstrap {
 		);
 
 
-		$routes['quem_seguir'] = array(
-			'route' => '/quem_seguir',
+		$routes['procura_Cor'] = array(
+			'route' => '/procura_Cor',
 			'controller' => 'AppController',
-			'action' => 'quemSeguir'
+			'action' => 'procuraCor'
 		);
+
+		$routes['procura_corAdmin'] = array(
+			'route' => '/procura_corAdmin',
+			'controller' => 'AppController',
+			'action' => 'procuracorAdmin'
+		);
+
+		
 
 		
 

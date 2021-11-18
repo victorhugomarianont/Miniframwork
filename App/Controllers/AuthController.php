@@ -27,7 +27,7 @@ class AuthController extends Action {
 			header('Location: /timeline');
 
 		} else {
-			header('Location: /quemSeguir');
+			header('Location: /procuraCor');
 		}
 
 	}
