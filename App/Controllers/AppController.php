@@ -75,6 +75,31 @@ class AppController extends Action {
 
 		$this->render('procuracorAdmin');
 	}
+	public function excluirCor(){
+		
+		
+		$excluirFilho = isset($_GET['excluirFilho']) ? $_GET['excluirFilho'] : '';
+
+		
+		$mensagens = array();
+
+		if($excluirFilho != '') {
+			
+			$mensagens = Container::getModel('mensagens');
+			$mensagens->__set('id', $excluirFilho);
+			$mensagens = $mensagens->deleteCores();
+
+		}
+
+			
+			
+
+			$this->view->mensagens = $mensagens;
+
+		$this->render('procuracorAdmin');
+			
+
+	}
 
 	
 }
