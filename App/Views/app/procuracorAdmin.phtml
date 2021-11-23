@@ -76,13 +76,24 @@
 							<div class="card-body">
 								<div class="row">
 									<div class="col-md-6">
-										<?= $mensagens['Cor'] ?>
-                    <br>
-                    <?= $mensagens['Detalhes'] ?>
-                    <br>
-                    <input type="color" value="<?= $mensagens['Detalhes'] ?>"  id="amostra_cor" disabled>
-                    <br>
-                    <span color="<?=$mensagens['Detalhes']?>">Pesquise Mais, Nos agradeçemos.</span>
+										<form method="get" action="/excluirCor"> 
+										  <input type="hidden"  name="excluirFilho" value="<?= $mensagens['id'] ?>" />
+																	<?= $mensagens['id'] ?>
+										    <br>
+										  <?= $mensagens['Cor'] ?>
+										    <br>
+										    <?= $mensagens['Detalhes'] ?>
+										    <br>
+										    <input type="color" value="<?= $mensagens['Detalhes'] ?>"  id="amostra_cor" disabled>
+										    <br>
+										    <span color="<?=$mensagens['Detalhes']?>">Pesquise Mais, Nos agradeçemos.</span>
+
+
+
+										      <div class="col d-flex justify-content-end">
+											<button type="submit" class="btn btn-danger"><small>Remover</small></button>
+										      </div>
+										    </form>
 
                     
                     
