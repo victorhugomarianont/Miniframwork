@@ -45,6 +45,15 @@ class mensagens extends Model {
 			return $stmt->fetchAll(\PDO::FETCH_ASSOC);
 		}
 	
+		public function deleteCores(){
+			
+			$query = "delete from mensagens where id = :id";
+			$delete = $this->db->prepare($query);
+			$delete->bindValue(':id',$this->__get('id'));
+			$delete->execute();
+			return $delete->fetchAll(\PDO::FETCH_ASSOC);
+		}
+	
 		
 		
 	}
