@@ -72,6 +72,11 @@ class Route extends Bootstrap {
 			'controller' => 'AppController',
 			'action' => 'procuracorAdmin'
 		);
+		$routes['excluirCor'] = array(
+			'route' => '/excluirCor',
+			'controller' => 'AppController',
+			'action' => 'excluirCor'
+		);
 
 		
 
